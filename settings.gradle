@@ -1,2 +1,2 @@
-include ':Core'
+include ':CoreLibrary'
 rootProject.name = "Core"
