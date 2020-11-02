@@ -10,6 +10,6 @@ import retrofit2.http.POST;
 
 public interface IRequestVerificationCodeApi {
 
-    @POST
+    @POST("/api/requestCode")
     Observable<ApiResult<RequestVerificationCodeResult>> requestCode(@Body RequestVerificationCodeModel model);
 }

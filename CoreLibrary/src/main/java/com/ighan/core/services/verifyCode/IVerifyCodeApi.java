@@ -10,6 +10,6 @@ import retrofit2.http.POST;
 
 public interface IVerifyCodeApi {
 
-    @POST
+    @POST("/api/verifyCode")
     Observable<ApiResult<VerifyCodeResult>> verify(@Body VerifyCodeModel model);
 }
