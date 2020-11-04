@@ -15,8 +15,8 @@ public abstract class VerifyCodeService extends BaseService<IVerifyCodeApi> {
         super(IVerifyCodeApi.class);
     }
 
-    public void verify(Context context, String verifyCode, ApiCallResult<ApiResult<VerifyCodeResult>> apiCallResult) {
-        doObserveAndSubscribe(getApi().verify(new VerifyCodeModel(verifyCode)), new ApiCallResult<ApiResult<VerifyCodeResult>>() {
+    public void verify(Context context, String verificationCode, ApiCallResult<ApiResult<VerifyCodeResult>> apiCallResult) {
+        doObserveAndSubscribe(getApi().verify(new VerifyCodeModel(verificationCode)), new ApiCallResult<ApiResult<VerifyCodeResult>>() {
             @Override
             public void onSuccess(ApiResult<VerifyCodeResult> result) {
                 if (result != null && result.isSuccess() && result.getData() != null && result.getData().getToken() != null && result.getData().getToken().length() > 0) {
